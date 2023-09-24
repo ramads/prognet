@@ -3,31 +3,31 @@ package ModulStream;
 import java.io.*;
 
 public class Coba2_FileCopyCharacter {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+        String fileInputLoc = "src/ModulStream/data/input.txt";
+        String fileOutputLoc = "src/ModulStream/data/output.txt";
+
         FileReader inputStream = null;
         FileWriter outputStream = null;
 
         try {
-            inputStream = new FileReader("src/ModulStream/data/input.txt"); //membuat stream inputStream
-            outputStream = new FileWriter("src/ModulStream/data/output.txt"); //Membuat stream outputStream
+            //membuat stream inputStream
+            inputStream = new FileReader(fileInputLoc);
+            //Membuat stream outputStream
+            outputStream = new FileWriter(fileOutputLoc);
 
             int c;
             while ((c = inputStream.read()) != -1) {    //membaca tiap2 karakter dan menuliskannya
                 outputStream.write(c);
             }
+        } catch (IOException e) {
+            System.out.println("Terjadi kesalahan: " + e.toString());
         } finally {
-            if (inputStream != null) {
-                try {
-                    inputStream.close();		//menutup inputStream
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (outputStream != null) {  try {
-                outputStream.close();	//menutup outputStream
-            }
-            catch (IOException e) {  e.printStackTrace();
-            }
+            try {
+                if (inputStream != null) inputStream.close();		//menutup inputStream
+                if (outputStream != null) outputStream.close();	//menutup outputStream
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }

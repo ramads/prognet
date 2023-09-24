@@ -4,6 +4,7 @@ import java.io.*;
 
 public class Coba1_FileInputStream {
     public static void main(String[] args) {
+        // sesuaikan file path dengan lokasi masing-masing
         String fileLocation = "src/ModulStream/data/abc.dat";
         FileInputStream myFile = null;
 
