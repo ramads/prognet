@@ -1,11 +1,11 @@
-package ModulStream;
+package Modul1Stream;
 
 import java.io.*;
 
 public class Coba2_FileCopyCharacter {
     public static void main(String[] args) {
-        String fileInputLoc = "src/ModulStream/data/input.txt";
-        String fileOutputLoc = "src/ModulStream/data/output.txt";
+        String fileInputLoc = "src/Modul1Stream/data/input.txt";
+        String fileOutputLoc = "src/Modul1Stream/data/output.txt";
 
         FileReader inputStream = null;
         FileWriter outputStream = null;

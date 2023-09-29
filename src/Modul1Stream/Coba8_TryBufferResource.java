@@ -1,24 +1,22 @@
-package ModulStream;
+package Modul1Stream;
 
 import java.io.*;
 
-public class Coba6_FileCopyBufferedStream {
+public class Coba8_TryBufferResource {
     public static void main(String[] args) {
-        String inFileStr = "src/ModulStream/data/test-in.jpeg";
-        String outFileStr = "src/ModulStream/data/test-out.jpeg";
-
-        BufferedInputStream in = null;
-        BufferedOutputStream out = null;
+        String inFileStr = "src/Modul1Stream/data/test-in.jpeg";
+        String outFileStr = "src/Modul1Stream/data/test-out.jpeg";
 
         long startTime, elapsedTime; // untuk melihat waktu pemrosesan
 
         // Mencetak besar file
         File fileIn = new File(inFileStr);
         System.out.println("File size is " + fileIn.length() + " bytes");
-        try {
-            in = new BufferedInputStream(new FileInputStream(inFileStr));
-            out = new BufferedOutputStream(new FileOutputStream(outFileStr));
 
+        try (
+            BufferedInputStream in = new BufferedInputStream(new FileInputStream(inFileStr));
+            BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(outFileStr))
+        ){
             startTime = System.nanoTime();
             int byteRead;
 
@@ -32,14 +30,6 @@ public class Coba6_FileCopyBufferedStream {
 
         } catch (IOException ex) {
             ex.printStackTrace();
-
-        } finally { // selalu tutup I/O streams
-            try {
-                if (in != null) in.close();
-                if (out != null) out.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
         }
     }
 }

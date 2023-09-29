@@ -1,10 +1,10 @@
-package ModulStream;
+package Modul1Stream;
 
 import java.io.*;
 
 public class Contoh1_BacaFile {
     public static void main(String[] args) {
-        String filePath = "src/ModulStream/data/data.txt";
+        String filePath = "src/Modul1Stream/data/data.txt";
 
         BufferedInputStream fileStream = null;
 

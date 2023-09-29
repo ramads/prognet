@@ -1,4 +1,4 @@
-package ModulStream;
+package Modul1Stream;
 
 import java.io.*;
 
@@ -6,7 +6,7 @@ import java.io.*;
 // FileReader/FileWriter menggunakan encoding charset default.
 public class Coba9_BufferedReaderWriter {
     public static void main(String[] args) {
-        String strFilename = "src/ModulStream/data/out.txt";
+        String strFilename = "src/Modul1Stream/data/out.txt";
         String message = "Hello, world!\r\nHello, world again!\r\n"; // 2 lines of texts
 
         // Mencetak default charset

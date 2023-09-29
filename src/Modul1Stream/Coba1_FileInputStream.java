@@ -1,11 +1,11 @@
-package ModulStream;
+package Modul1Stream;
 
 import java.io.*;
 
 public class Coba1_FileInputStream {
     public static void main(String[] args) {
         // sesuaikan file path dengan lokasi masing-masing
-        String fileLocation = "src/ModulStream/data/abc.dat";
+        String fileLocation = "src/Modul1Stream/data/abc.dat";
         FileInputStream myFile = null;
 
         try {

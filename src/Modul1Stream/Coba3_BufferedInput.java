@@ -1,4 +1,4 @@
-package ModulStream;
+package Modul1Stream;
 
 import java.io.*;
 
@@ -11,7 +11,7 @@ public class Coba3_BufferedInput {
 
         try {
             //membuat stream myFile yang merujuk pada suatu file
-            myFile = new FileInputStream("src/ModulStream/data/abc.dat");
+            myFile = new FileInputStream("src/Modul1Stream/data/abc.dat");
             buff = new BufferedInputStream(myFile);	//memasukkan stream myFile ke buffered stream buff
             boolean eof = false;
             while (!eof) {

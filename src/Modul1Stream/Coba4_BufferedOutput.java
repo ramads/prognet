@@ -1,4 +1,4 @@
-package ModulStream;
+package Modul1Stream;
 
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Coba4_BufferedOutput {
 
     public static void main (String [] args){
-        String fileLocation = "src/ModulStream/data/xyz.dat";
+        String fileLocation = "src/Modul1Stream/data/xyz.dat";
         int someData[] = {733, 110, 105, 32, 97, 100, 97, 108, 97, 104, 32, 102, 105, 108, 101, 32, 116, 101, 115, 116, 32, 112, 101, 114, 116, 97, 109, 97};
 
         FileOutputStream myFile = null;

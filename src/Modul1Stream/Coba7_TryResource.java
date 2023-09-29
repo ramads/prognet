@@ -1,11 +1,11 @@
-package ModulStream;
+package Modul1Stream;
 
 import java.io.*;
 
 public class Coba7_TryResource {
     public static void main(String[] args) {
-        String inFileStr = "src/ModulStream/data/test-in.jpeg";
-        String outFileStr = "src/ModulStream/data/test-out.jpeg";
+        String inFileStr = "src/Modul1Stream/data/test-in.jpeg";
+        String outFileStr = "src/Modul1Stream/data/test-out.jpeg";
 
         long startTime, elapsedTime; // untuk melihat waktu pemrosesan
 

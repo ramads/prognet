@@ -1,14 +1,14 @@
-package ModulStream;
+package Modul1Stream;
 
 import java.io.*;
 
-public class Coba5_FileCopyNoBuffer {
+public class Coba6_FileCopyBufferedStream {
     public static void main(String[] args) {
-        String inFileStr = "src/ModulStream/data/test-in.jpeg";
-        String outFileStr = "src/ModulStream/data/test-out.jpeg";
+        String inFileStr = "src/Modul1Stream/data/test-in.jpeg";
+        String outFileStr = "src/Modul1Stream/data/test-out.jpeg";
 
-        FileInputStream in = null;
-        FileOutputStream out = null;
+        BufferedInputStream in = null;
+        BufferedOutputStream out = null;
 
         long startTime, elapsedTime; // untuk melihat waktu pemrosesan
 
@@ -16,8 +16,9 @@ public class Coba5_FileCopyNoBuffer {
         File fileIn = new File(inFileStr);
         System.out.println("File size is " + fileIn.length() + " bytes");
         try {
-            in = new FileInputStream(inFileStr);
-            out = new FileOutputStream(outFileStr);
+            in = new BufferedInputStream(new FileInputStream(inFileStr));
+            out = new BufferedOutputStream(new FileOutputStream(outFileStr));
+
             startTime = System.nanoTime();
             int byteRead;
 
